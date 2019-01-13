@@ -14,7 +14,7 @@ const HomeStack = createStackNavigator({
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: 'Greeting',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -28,14 +28,15 @@ HomeStack.navigationOptions = {
 };
 
 const UserStack = createStackNavigator({
-  Links: User,
+  Users: User,
 });
 
 UserStack.navigationOptions = {
-  tabBarLabel: 'User',
+  tabBarLabel: 'About developer',
   tabBarIcon: ({ focused }) => (
     < Icon someIcon
       focused={focused}
+      size={26}
       name='user'
     />
   ),
@@ -45,6 +46,5 @@ UserStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  UserStack,
-  
+  UserStack,  
 });
