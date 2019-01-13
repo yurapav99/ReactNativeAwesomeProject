@@ -1,9 +1,9 @@
 import React from 'react';
 import { ScrollView, StyleSheet,View,Text,Platform } from 'react-native';
 import {MyImage} from '../components/MyImage'
-import { MonoText } from '../components/StyledText';
 
-export default class LinksScreen extends React.Component {
+
+export default class User extends React.Component {
   static navigationOptions = {
     title: 'Links',
   };
@@ -21,12 +21,15 @@ export default class LinksScreen extends React.Component {
       <ScrollView style={styles.container}>
         {/* Go ahead and delete ExpoLinksView and replace it with your
            * content, we just wanted to provide you with some helpful links */}
-           <View style={styles.welcomeContainer}> 
-         
-            <MyImage/>
-            <Text style={styles. developmentModeText}>Yura Pavliuk</Text>
+           <View style={ styles.welcomeContainer}>    
+            <MyImage/>       
              </View>
-         
+            
+            
+             <View style={styles.welcomeStartContainer}>    
+             <Text style={styles.ModeText}>Eager for knowlenge. Good listener and fast learner. Quite adaptive. Like to work in a team. Hardworker. 
+              Want to learn about IT industry and became proffesional software dev.</Text>    
+             </View>
       </ScrollView>
 
       </View>
@@ -46,6 +49,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 20,
   },
+  welcomeStartContainer: {
+   flex:1,
+    alignItems: 'flex-start',
+    marginBottom: 20,
+    backgroundColor: '#fbfbfb',
+ 
+  },
   developmentModeText: {
    
     alignItems: 'center',
@@ -55,6 +65,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fbfbfb',
     fontFamily: 'Cochin',
    
+  },
+  ModeText: {
+   flex:1,
+    fontSize: 18,  
+    marginTop: 10,   
+    alignItems:"flex-start",
   },
   UserInfoContainer: {
 position:"relative",
